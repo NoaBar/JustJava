@@ -1,7 +1,6 @@
 
 package com.example.android.justjava;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -44,11 +43,21 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view)   {
-        int price = quantity*5;
-        String priceMessage = "Total: $" + price ;
-         priceMessage = priceMessage + "\n\nThank you!" ;
+        int price = calculatePrice();
+        String priceMessage = "Total: $" + price + "\n\nThank you!" ;
         displayMessage(priceMessage);
     }
+
+
+    /**
+     * Calculates the price of the order.
+     *@return total price
+     */
+    private int calculatePrice() {
+        int price = quantity * 5;
+        return price;
+    }
+
 
     /**
      * This method displays the given quantity value on the screen.
@@ -90,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         quantity=savedInstanceState.getInt("quantity",0);
         displayQuantity(quantity);
+        displayPrice(quantity*5);
     }
 
     /** don't forget to add "thank you" message after rotation
