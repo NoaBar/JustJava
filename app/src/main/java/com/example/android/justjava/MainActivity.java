@@ -90,7 +90,9 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         quantity=savedInstanceState.getInt("quantity",0);
         displayQuantity(quantity);
-        displayPrice(quantity*5);
     }
+
+    /** don't forget to add "thank you" message after rotation
+     */
 }
 
