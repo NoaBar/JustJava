@@ -44,10 +44,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view)   {
         int price = calculatePrice();
-        String priceMessage = "Total: $" + price + "\n\nThank you!" ;
-        displayMessage(priceMessage);
+        displayMessage(createOrderSummary(price));
     }
-
 
     /**
      * Calculates the price of the order.
@@ -58,6 +56,19 @@ public class MainActivity extends AppCompatActivity {
         return price;
     }
 
+    /**
+     * This method creates an Order Summary.
+     */
+    private String createOrderSummary(int price){
+        String priceMessage = "Name: Noa";
+            priceMessage += "\nQuantity: " + quantity;
+            priceMessage += "\nTotal: $" + price;
+            priceMessage += "\n\nThank you!";
+        return priceMessage;
+    }
+/**
+ * מה הסיבה שכתבנו אינט ביצירת סיכום ההזמנה?
+ */
 
     /**
      * This method displays the given quantity value on the screen.
