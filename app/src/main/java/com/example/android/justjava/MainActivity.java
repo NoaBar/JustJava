@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view)   {
-        int price = calculatePrice();
-        displayMessage(createOrderSummary(price));
+        int prices = calculatePrice();
+        displayMessage(createOrderSummary(prices));
     }
 
     /**
@@ -57,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method creates an Order Summary.
+     * This method creates an Summary of the order.
+     * @param price of the order
+     * @return text summary
      */
     private String createOrderSummary(int price){
         String priceMessage = "Name: Noa";
@@ -66,9 +68,7 @@ public class MainActivity extends AppCompatActivity {
             priceMessage += "\n\nThank you!";
         return priceMessage;
     }
-/**
- * מה הסיבה שכתבנו אינט ביצירת סיכום ההזמנה?
- */
+
 
     /**
      * This method displays the given quantity value on the screen.
@@ -78,25 +78,18 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
 
     /**
      * This method displays the given text on the screen.
      */
     private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(message);
     }
 
 
     /**
-     * המתודה הזו דואגת לשמור על המידע שהוכנס גם כשהופכים את תצוגת הפלאפון או מכבים אותו
+     * keeps info after rotation
      */
 
     @Override
@@ -110,10 +103,9 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         quantity=savedInstanceState.getInt("quantity",0);
         displayQuantity(quantity);
-        displayPrice(quantity*5);
     }
 
-    /** don't forget to add "thank you" message after rotation
+    /** don't forget to add "order summary" message after rotation
      */
 }
 
