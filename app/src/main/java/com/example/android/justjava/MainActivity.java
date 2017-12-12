@@ -2,6 +2,7 @@
 package com.example.android.justjava;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -44,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view)   {
         int prices = calculatePrice();
+        Log.v("MainActivity", "the price is "+ prices);
         displayMessage(createOrderSummary(prices));
+
     }
 
     /**
