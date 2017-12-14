@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Just Java</string>
     <string name="whipped_cream">Whipped cream</string>
-    <string name="quantity">quantity</string>
+    <string name="Quantity">Quantity</string>
     <string name="minus">-</string>
     <string name="number_of_coffees">0</string>
     <string name="plus">+</string>
@@ -9,4 +9,5 @@
     <string name="price">$0</string>
     <string name="order">order</string>
     <string name="toppings">Toppings</string>
+    <string name="chocolate_topping">Chocolate</string>
 </resources>

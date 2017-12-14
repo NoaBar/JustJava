@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -44,13 +45,18 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view)   {
+        CheckBox whippedCreamCheckBox = (CheckBox)findViewById(R.id.whipped_cream_checkbox);
+        boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
+        CheckBox chocolate0 = (CheckBox) findViewById(R.id.chocolate_checkbox);
+        boolean Chocolate1 = chocolate0.isChecked();
+        Log.v("MainActivity", "Has chocolate: "+ Chocolate1);
         int prices = calculatePrice();
-        Log.v("MainActivity", "the price is "+ prices);
-        displayMessage(createOrderSummary(prices));
+        String PriceMessage = createOrderSummary(prices, hasWhippedCream, Chocolate1);
+        displayMessage(PriceMessage);
 
     }
 
-    /**
+      /**
      * Calculates the price of the order.
      *@return total price
      */
@@ -59,13 +65,18 @@ public class MainActivity extends AppCompatActivity {
         return price;
     }
 
+
+
     /**
      * This method creates an Summary of the order.
      * @param price of the order
+     * @param addWhippedCream is whether or not the user wants whipped cream topping
      * @return text summary
      */
-    private String createOrderSummary(int price){
+    private String createOrderSummary(int price, boolean addWhippedCream, boolean Chocolate2){
         String priceMessage = "Name: Noa";
+            priceMessage += "\nAdd whipped cream? "+ addWhippedCream;
+            priceMessage += "\nAdd chocolate? "+ Chocolate2;
             priceMessage += "\nQuantity: " + quantity;
             priceMessage += "\nTotal: $" + price;
             priceMessage += "\n\nThank you!";
