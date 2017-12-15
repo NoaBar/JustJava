@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -61,7 +62,9 @@ public class MainActivity extends AppCompatActivity {
         boolean Chocolate1 = chocolate0.isChecked();
         Log.v("MainActivity", "Has chocolate: "+ Chocolate1);
         int prices = calculatePrice();
-        String PriceMessage = createOrderSummary(prices, hasWhippedCream, Chocolate1);
+        EditText nameInput = (EditText)findViewById(R.id.name);
+        String name = nameInput.getText().toString();
+        String PriceMessage = createOrderSummary(prices, hasWhippedCream, Chocolate1, name);
         displayMessage(PriceMessage);
     }
 
@@ -72,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
          * @param Chocolate2 is whether or not the user wants chocolate topping
          * @return text summary
          */
-    private String createOrderSummary(int price, boolean addWhippedCream, boolean Chocolate2){
-        String priceMessage1 = "Name: Noa";
+    private String createOrderSummary(int price, boolean addWhippedCream, boolean Chocolate2, String name){
+        String priceMessage1 = "Name: " + name;
             priceMessage1 += "\nAdd whipped cream? "+ addWhippedCream;
             priceMessage1 += "\nAdd chocolate? "+ Chocolate2;
             priceMessage1 += "\nQuantity: " + quantity;
