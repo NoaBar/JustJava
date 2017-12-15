@@ -10,4 +10,5 @@
     <string name="order">order</string>
     <string name="toppings">Toppings</string>
     <string name="chocolate_topping">Chocolate</string>
+    <string name="name">Name</string>
 </resources>

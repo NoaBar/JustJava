@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
@@ -40,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
         displayQuantity (quantity);
     }
 
+    /**
+     * Calculates the price of the order.
+     *@return total price
+     */
+    private int calculatePrice() {
+        int price = quantity * 5;
+        return price;
+    }
+
 
     /**
      * This method is called when the order button is clicked.
@@ -53,34 +63,24 @@ public class MainActivity extends AppCompatActivity {
         int prices = calculatePrice();
         String PriceMessage = createOrderSummary(prices, hasWhippedCream, Chocolate1);
         displayMessage(PriceMessage);
-
     }
 
-      /**
-     * Calculates the price of the order.
-     *@return total price
-     */
-    private int calculatePrice() {
-        int price = quantity * 5;
-        return price;
-    }
-
-
-
-    /**
-     * This method creates an Summary of the order.
-     * @param price of the order
-     * @param addWhippedCream is whether or not the user wants whipped cream topping
-     * @return text summary
-     */
+        /**
+         * This method creates an Summary of the order.
+         * @param price of the order
+         * @param addWhippedCream is whether or not the user wants whipped cream topping
+         * @param Chocolate2 is whether or not the user wants chocolate topping
+         * @return text summary
+         */
     private String createOrderSummary(int price, boolean addWhippedCream, boolean Chocolate2){
-        String priceMessage = "Name: Noa";
-            priceMessage += "\nAdd whipped cream? "+ addWhippedCream;
-            priceMessage += "\nAdd chocolate? "+ Chocolate2;
-            priceMessage += "\nQuantity: " + quantity;
-            priceMessage += "\nTotal: $" + price;
-            priceMessage += "\n\nThank you!";
-        return priceMessage;
+        String priceMessage1 = "Name: Noa";
+            priceMessage1 += "\nAdd whipped cream? "+ addWhippedCream;
+            priceMessage1 += "\nAdd chocolate? "+ Chocolate2;
+            priceMessage1 += "\nQuantity: " + quantity;
+            priceMessage1 += "\nTotal: $" + price;
+            priceMessage1 += "\n\nThank you!";
+
+        return priceMessage1;
     }
 
 
