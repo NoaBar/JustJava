@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">רק קפה</string>
+    <string name="whipped_cream">קצפת</string>
+    <string name="order_summary">תקציר הזמנה</string>
+    <string name="order">הזמן</string>
+    <string name="toppings">תוספות</string>
+    <string name="chocolate_topping">שוקולד</string>
+    <string name="name">שם</string>
+    <string name="thankyou">תודה!</string>
+    <string name="total">סך הכל: ₪ </string>
+    <string name="price">0₪</string>
+    <string name="number_of_coffees">1</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="addChocolate">להוסיף שוקולד?</string>
+    <string name="addCream">להוסיף קצפת?</string>
+    <string name="nameSum">"שם: "</string>
+    <string name="quantity">כמות</string>
+</resources>
