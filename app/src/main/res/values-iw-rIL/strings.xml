@@ -17,4 +17,6 @@
     <string name="addCream">להוסיף קצפת?</string>
     <string name="nameSum">"שם: "</string>
     <string name="quantity">כמות</string>
+    <string name="cant1">לא ניתן להזמין פחות מקפה 1</string>
+    <string name="cant100">לא ניתן להזמין יותר מ100 כוסות קפה</string>
 </resources>

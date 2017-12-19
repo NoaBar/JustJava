@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view) {
         if (quantity == 100) {
             // Show an error message as a toast
-            Toast.makeText(this, "You cannot have more than 100 coffees", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.cant100, Toast.LENGTH_SHORT).show();
             // Exit this method early because there's nothing left to do
             return;
         }
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     public void decrement(View view) {
        if (quantity == 1) {
            // Show an error message as a toast
-           Toast.makeText(this, "You cannot have less than 1 coffee", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, R.string.cant1, Toast.LENGTH_SHORT).show();
            // Exit this method early because there's nothing left to do
            return;
        }
@@ -126,12 +126,13 @@ public class MainActivity extends AppCompatActivity {
          * @return text summary
          */
     private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean Chocolate2){
-        String priceMessage1 = getString(R.string.nameSum, name);
-            priceMessage1 += getString(R.string.addCream)+ addWhippedCream;
-            priceMessage1 += getString(R.string.addChocolate)+ Chocolate2;
-            priceMessage1 += getString(R.string.quantity)+ ": " + quantity;
-            priceMessage1 += getString(R.string.total) + price;
-            priceMessage1 += getString(R.string.thankyou);
+        String priceMessage1 = getString(R.string.name_sum, name);
+            priceMessage1 += "\n" + getString(R.string.addCream)+ " " + addWhippedCream;
+            priceMessage1 += "\n" + getString(R.string.addChocolate)+ " " + Chocolate2;
+            priceMessage1 += "\n" + getString(R.string.quantity)+ ": " + quantity;
+            priceMessage1 += "\n" + getString(R.string.total) + price;
+                NumberFormat.getCurrencyInstance().format(price));
+            priceMessage1 += "\n\n" + getString(R.string.thankyou);
 
         return priceMessage1;
     }

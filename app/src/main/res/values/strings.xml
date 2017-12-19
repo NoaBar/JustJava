@@ -20,5 +20,7 @@
     <!--
     Name for the order summary. it will be shown in the format of "Name: Noa" where Noa is the user's name [char limit= None]
     -->
-    <string name="nameSum">Name: <xliff:g id="name" example="Noa">%s</xliff:g></string>
+    <string name="name_sum">Name: <xliff:g id="name" example="Noa">%s</xliff:g></string>
+    <string name="cant1">You cannot have less than 1 coffee</string>
+    <string name="cant100">You cannot have more than 100 coffees</string>
 </resources>
