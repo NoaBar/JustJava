@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java order for "+ name);
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject)+ name);
         intent.putExtra(Intent.EXTRA_TEXT, PriceMessage);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
@@ -127,11 +127,10 @@ public class MainActivity extends AppCompatActivity {
          */
     private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean Chocolate2){
         String priceMessage1 = getString(R.string.name_sum, name);
-            priceMessage1 += "\n" + getString(R.string.addCream)+ " " + addWhippedCream;
-            priceMessage1 += "\n" + getString(R.string.addChocolate)+ " " + Chocolate2;
+            priceMessage1 += "\n" + getString(R.string.addCream, addWhippedCream);
+            priceMessage1 += "\n" + getString(R.string.addChocolate, Chocolate2);
             priceMessage1 += "\n" + getString(R.string.quantity)+ ": " + quantity;
-            priceMessage1 += "\n" + getString(R.string.total) + price;
-                NumberFormat.getCurrencyInstance().format(price));
+            priceMessage1 += "\n" + getString(R.string.total) + NumberFormat.getCurrencyInstance().format(price);
             priceMessage1 += "\n\n" + getString(R.string.thankyou);
 
         return priceMessage1;

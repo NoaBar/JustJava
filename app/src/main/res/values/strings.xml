@@ -15,12 +15,25 @@
     <!--Thank you message for the order summary [char limit= None]-->
     <string name="thankyou">Thank you!</string>
     <string name="total">Total: $</string>
-    <string name="addChocolate">Add chocolate?</string>
-    <string name="addCream">Add whipped cream?</string>
+
+    <!--
+          Chocolate topping for the order summary. It will be shown in the format of
+          "Add chocolate? true" or "Add chocolate? false". [CHAR LIMIT=NONE]
+        -->
+    <string name="addChocolate">Add chocolate? <xliff:g id="addChocolate">%b</xliff:g></string>
+
+    <!--
+      Whipped cream topping for the order summary. It will be shown in the format of
+      "Add whipped cream? true" or "Add whipped cream? false". [CHAR LIMIT=NONE]
+    -->
+    <string name="addCream">Add whipped cream? <xliff:g id="addWhippedCream">%b</xliff:g></string>
+
+
     <!--
     Name for the order summary. it will be shown in the format of "Name: Noa" where Noa is the user's name [char limit= None]
     -->
     <string name="name_sum">Name: <xliff:g id="name" example="Noa">%s</xliff:g></string>
     <string name="cant1">You cannot have less than 1 coffee</string>
     <string name="cant100">You cannot have more than 100 coffees</string>
+    <string name="email_subject">Just Java order for </string>
 </resources>
