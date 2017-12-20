@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the plus button is clicked.
      */
 
-    // לשאול את טל על this בטוסט. איזה עוד אופציות יש?
-
     public void increment(View view) {
         if (quantity == 100) {
             // Show an error message as a toast
@@ -62,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
     /**
      * Calculates the price of the order.
      *@return total price
@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
      * @param Chocolate1  is whether or not the user wants chocolate.
      */
 
-    // לשאול את טל על סוגי הערות. לשאול את טל על הוספת 2 בוליאן לקלקיוליטפרייס
     private int calculatePrice(boolean hasWhippedCream, boolean Chocolate1) {
         //price of 1 cup of coffee
         int basePrice = 5;
@@ -163,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
         displayQuantity(quantity);
     }
 
-    /** don't forget to add "order summary" message after rotation
-     */
+
 }
 
