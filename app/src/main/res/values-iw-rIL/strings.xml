@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">רק קפה</string>
-    <string name="whipped_cream">קצפת</string>
     <string name="order_summary">תקציר הזמנה</string>
     <string name="order">הזמן</string>
     <string name="toppings">תוספות</string>
-    <string name="chocolate_topping">שוקולד</string>
     <string name="name">שם</string>
     <string name="thankyou">תודה!</string>
     <string name="total">סך הכל:  </string>
     <string name="price">0₪</string>
     <string name="number_of_coffees">1</string>
-    <string name="addChocolate">להוסיף שוקולד? <xliff:g id="addChocolate">%b</xliff:g></string>
-    <string name="addCream">להוסיף קצפת? <xliff:g id="addWhippedCream">%b</xliff:g></string>
+    <string name="addChocolate">להוסיף שוקולד?  <xliff:g id="addChocolate">%b</xliff:g></string>
+    <string name="addCream">להוסיף קצפת?  <xliff:g id="addWhippedCream">%b</xliff:g></string>
     <string name="quantity">כמות</string>
     <string name="cant1">לא ניתן להזמין פחות מכוס קפה אחת</string>
     <string name="cant100">לא ניתן להזמין יותר ממאה כוסות קפה</string>
     <string name="name_sum">שם: <xliff:g id="name" example="נועה">%s</xliff:g></string>
-    <string name="email_subject">רק קפה הזמנה ל</string>
+    <string name="email_subject">רק קפה הזמנה על שם</string>
+    <string name="chocolate_topping">שוקולד 2₪</string>
+    <string name="whipped_cream">קצפת 1₪</string>
+    <string name="one_cup_price">מחיר כוס קפה אחת ללא תוספות 5₪</string>
+
 
 </resources>

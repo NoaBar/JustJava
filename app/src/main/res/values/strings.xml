@@ -1,20 +1,26 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Just Java</string>
-    <string name="whipped_cream">Whipped cream</string>
+
+    <!--checkBox shows whether the user wants cream or not -->
+    <string name="whipped_cream">Whipped cream ($1)</string>
+    <!--Header text for the selection of quantity of coffees -->
     <string name="quantity">Quantity</string>
     <string name="minus" translatable="false">-</string>
+    <!--shows the quantity of coffees in the on selection and in order summary -->
     <string name="number_of_coffees">1</string>
     <string name="plus" translatable="false">+</string>
     <string name="order_summary">Order Summary</string>
+    <!--price message for the order summary [char limit= None]-->
     <string name="price">$0</string>
     <string name="order">order</string>
     <!--Header text for the list of toppings [char limit=20]-->
     <string name="toppings">Toppings</string>
-    <string name="chocolate_topping">Chocolate</string>
+    <!--checkBox shows whether the user wants chocolate or not -->
+    <string name="chocolate_topping">Chocolate ($2)</string>
     <string name="name">Name</string>
     <!--Thank you message for the order summary [char limit= None]-->
     <string name="thankyou">Thank you!</string>
-    <string name="total">Total: $</string>
+    <string name="total">Total: </string>
 
     <!--
           Chocolate topping for the order summary. It will be shown in the format of
@@ -36,4 +42,5 @@
     <string name="cant1">You cannot have less than 1 coffee</string>
     <string name="cant100">You cannot have more than 100 coffees</string>
     <string name="email_subject">Just Java order for </string>
+    <string name="one_cup_price">(One cup of coffee without toppings costs $5)</string>
 </resources>
