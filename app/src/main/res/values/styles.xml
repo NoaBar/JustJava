@@ -4,10 +4,10 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#FFA000</item>
-        <item name="colorPrimaryDark">#FF8F00</item>
-        <item name="colorAccent">#FF6F00</item>
+        <item name="colorPrimaryDark">#FF6F00</item>
+        <item name="colorAccent">#FFA000</item>
         <item name="android:colorForeground">@color/foreground_material_light</item>
-        <item name="android:navigationBarColor">@android:color/holo_blue_dark</item>
     </style>
+
 
 </resources>

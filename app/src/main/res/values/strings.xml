@@ -9,6 +9,7 @@
     <!--shows the quantity of coffees in the on selection and in order summary -->
     <string name="number_of_coffees">1</string>
     <string name="plus" translatable="false">+</string>
+    <!--Header text for the list of order summery [char limit=20]-->
     <string name="order_summary">Order Summary</string>
     <!--price message for the order summary [char limit= None]-->
     <string name="price">$0</string>
@@ -20,6 +21,7 @@
     <string name="name">Name</string>
     <!--Thank you message for the order summary [char limit= None]-->
     <string name="thankyou">Thank you!</string>
+    <!--total for order summery [char limit=20]-->
     <string name="total">Total: </string>
 
     <!--
@@ -39,8 +41,11 @@
     Name for the order summary. it will be shown in the format of "Name: Noa" where Noa is the user's name [char limit= None]
     -->
     <string name="name_sum">Name: <xliff:g id="name" example="Noa">%s</xliff:g></string>
+    <!--Toast less than 1 coffee-->
     <string name="cant1">You cannot have less than 1 coffee</string>
+    <!--Toast more than 100 coffee-->
     <string name="cant100">You cannot have more than 100 coffees</string>
+    <!--email subject-->
     <string name="email_subject">Just Java order for </string>
     <string name="one_cup_price">(One cup of coffee without toppings costs $5)</string>
 </resources>
