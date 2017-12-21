@@ -5,13 +5,15 @@
     tools:context="com.example.android.justjava.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/coffee2">
+    android:background="@drawable/coffee2"
+    >
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@drawable/coffee2"
         >
 
         <EditText
@@ -24,6 +26,10 @@
             android:textStyle="bold"
             android:textColor="#1A237E"
             android:textColorHint="#424242"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="20"
+            android:shadowDx="0"
+            android:shadowDy="0"
             />
 
         <TextView
@@ -37,7 +43,11 @@
             android:textAllCaps="true"
             android:textSize="18sp"
             android:textColor="#1A237E"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="20"
+            android:shadowDx="0"
+            android:shadowDy="0"/>
 
 
         <TextView
@@ -49,7 +59,11 @@
             android:layout_marginBottom="16dp"
             android:textSize="15sp"
             android:textColor="#000"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="20"
+            android:shadowDx="0"
+            android:shadowDy="0"/>
 
         <CheckBox
             android:id="@+id/whipped_cream_checkbox"
@@ -62,6 +76,10 @@
             android:paddingStart="24dp"
             android:paddingLeft="24dp"
             android:paddingEnd="24dp"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="20"
+            android:shadowDx="0"
+            android:shadowDy="0"
             android:textStyle="bold"/>
 
         <CheckBox
@@ -71,6 +89,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:text="@string/chocolate_topping"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="20"
+            android:shadowDx="0"
+            android:shadowDy="0"
             android:textSize="16sp"
             android:paddingStart="24dp"
             android:paddingLeft="24dp"
@@ -90,7 +112,11 @@
             android:textAllCaps="true"
             android:textSize="18sp"
             android:textColor="#1A237E"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:shadowColor="#FFFFFF"
+            android:shadowRadius="20"
+            android:shadowDx="0"
+            android:shadowDy="0"/>
 
 
         <LinearLayout
@@ -114,7 +140,11 @@
                 android:text="@string/number_of_coffees"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="20"
+                android:shadowDx="0"
+                android:shadowDy="0"/>
 
             <Button
                 android:layout_width="48dp"
