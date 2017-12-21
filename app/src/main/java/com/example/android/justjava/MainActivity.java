@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        quantity=savedInstanceState.getInt("quantity",0);
+        quantity=savedInstanceState.getInt("quantity",1);
         displayQuantity(quantity);
     }
 
