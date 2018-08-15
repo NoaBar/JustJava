@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,6 +20,7 @@ import java.text.NumberFormat;
 public class MainActivity extends AppCompatActivity {
 
     int quantity = 1 ;
+    String[]toAddresses = new String[]{"Business@email.com"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, toAddresses);
         intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject)+ " "+ name);
         intent.putExtra(Intent.EXTRA_TEXT, PriceMessage);
         if (intent.resolveActivity(getPackageManager()) != null) {
